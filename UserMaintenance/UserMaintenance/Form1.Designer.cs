@@ -34,6 +34,7 @@ namespace UserMaintenance
             this.lblFullName = new System.Windows.Forms.Label();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.btnFajlba = new System.Windows.Forms.Button();
+            this.btnTorles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -46,7 +47,7 @@ namespace UserMaintenance
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(220, 141);
+            this.btnAdd.Location = new System.Drawing.Point(218, 98);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(175, 23);
             this.btnAdd.TabIndex = 5;
@@ -57,7 +58,7 @@ namespace UserMaintenance
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(217, 109);
+            this.lblFullName.Location = new System.Drawing.Point(215, 66);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(35, 13);
             this.lblFullName.TabIndex = 6;
@@ -65,14 +66,14 @@ namespace UserMaintenance
             // 
             // txtFullname
             // 
-            this.txtFullname.Location = new System.Drawing.Point(295, 104);
+            this.txtFullname.Location = new System.Drawing.Point(293, 61);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(100, 20);
             this.txtFullname.TabIndex = 7;
             // 
             // btnFajlba
             // 
-            this.btnFajlba.Location = new System.Drawing.Point(220, 181);
+            this.btnFajlba.Location = new System.Drawing.Point(218, 138);
             this.btnFajlba.Name = "btnFajlba";
             this.btnFajlba.Size = new System.Drawing.Size(175, 23);
             this.btnFajlba.TabIndex = 8;
@@ -80,11 +81,22 @@ namespace UserMaintenance
             this.btnFajlba.UseVisualStyleBackColor = true;
             this.btnFajlba.Click += new System.EventHandler(this.btnFajlba_Click);
             // 
+            // btnTorles
+            // 
+            this.btnTorles.Location = new System.Drawing.Point(218, 182);
+            this.btnTorles.Name = "btnTorles";
+            this.btnTorles.Size = new System.Drawing.Size(175, 23);
+            this.btnTorles.TabIndex = 9;
+            this.btnTorles.Text = "button1";
+            this.btnTorles.UseVisualStyleBackColor = true;
+            this.btnTorles.Click += new System.EventHandler(this.btnTorles_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 402);
+            this.Controls.Add(this.btnTorles);
             this.Controls.Add(this.btnFajlba);
             this.Controls.Add(this.txtFullname);
             this.Controls.Add(this.lblFullName);
@@ -104,6 +116,7 @@ namespace UserMaintenance
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.TextBox txtFullname;
         private System.Windows.Forms.Button btnFajlba;
+        private System.Windows.Forms.Button btnTorles;
     }
 }
 
