@@ -143,7 +143,7 @@ namespace Olympics
         private void cbxEv_SelectedValueChanged(object sender, EventArgs e)
         {
             var filteredResult = from x in results where x.Year == (int)cbxEv.SelectedItem select x;
-            dataGridView1.DataSource = filteredResult.ToList();
+            dataGridView1.DataSource = filteredResult.ToLis t();
         }
     }
 }
