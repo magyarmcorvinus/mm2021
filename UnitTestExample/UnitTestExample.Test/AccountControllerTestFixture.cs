@@ -82,15 +82,26 @@ namespace UnitTestExample.Test
         {
             //Arrange
             var accoutController = new AccountController();
+            Exception e = new ApplicationException(); ;
             //Act
             try
             {
-                var actualResult = accoutController.Register(email, password);
+                
+                try
+                {
+                    var actualResult = accoutController.Register(email, password);
+
+                }
+                catch (Exception xx)
+                {
+                    e = xx;
+                    throw;
+                }
                 Assert.Fail();
             }
-            catch (Exception E)
+            catch (Exception Exxx)
             {
-                Assert.IsInstanceOf<ValidationException>(E);
+                Assert.IsInstanceOf<ValidationException>(e);
             }
 
 
