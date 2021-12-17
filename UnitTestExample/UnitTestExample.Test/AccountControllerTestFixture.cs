@@ -76,30 +76,19 @@ namespace UnitTestExample.Test
             accountServiceMock.Verify(m => m.CreateAccount(actualResult), Times.Once);
         }
         [Test,
-        TestCase("irf@uni-corvinus", "Abcd1234"),
-        TestCase("irf.uni-corvinus.hu", "Abcd1234")]
+        TestCase("irf@uni-corvinus.hu", "Abcd1234")]
         public void TestRegisterValidateException(string email, string password)
         {
             //Arrange
             var accoutController = new AccountController();
-            Exception e = new ApplicationException(); ;
             //Act
             try
             {
-                
-                try
-                {
-                    var actualResult = accoutController.Register(email, password);
-
-                }
-                catch (Exception xx)
-                {
-                    e = xx;
-                    throw;
-                }
+                accoutController.Register(email, password); //irf@uni-corvinus.hu bekerül a listába
+                var actualResult = accoutController.Register(email, password); //másodjára is próbál bekerülni: hiba
                 Assert.Fail();
             }
-            catch (Exception Exxx)
+            catch (Exception e)
             {
                 Assert.IsInstanceOf<ValidationException>(e);
             }
